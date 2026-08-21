@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threads - Store Catalog</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="store-nav">
+        <h1>THREADS</h1>
+        <a href="/logout" class="logout-link">Logout</a>
+    </header>
+    <main class="grid">
+        <% products.forEach(product => { %>
+            <div class="card">
+                <img src="<%= product.img %>" alt="<%= product.name %>">
+                <h3><%= product.name %></h3>
+                <p class="price-tag">₹<%= product.price %></p>
+                <a href="/product/<%= product.id %>" class="btn">View Item</a>
+            </div>
+        <% }) %>
+    </main>
+</body>
+</html>
